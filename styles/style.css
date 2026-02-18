@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fafafa;
+}
+
+input, span, p {
+  color: #111517;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+
+h1 {
+  color: #111517;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+h2 {
+  color: #111517;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px; /* 144.444% */
+}
+
+span {
+  font-weight: 300;
+}
+
+input {
+  color: #848484;
+  font-weight: 400;
+}
+
+.lightfont {
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  padding: 24px 80px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  padding: 48px 80px;
+}
+main .countries {
+  width: 100%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 67px;
+  -moz-column-gap: 75px;
+       column-gap: 75px;
+}
+main .countries .country {
+  max-width: 264px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+main .countries .country img {
+  width: 267px;
+  height: 160px;
+}
+main .countries .country .card-info {
+  padding: 24px 0 46px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 8px;
+}
+main .countries .country .card-info h2 {
+  margin-bottom: 8px;
+}/*# sourceMappingURL=style.css.map */

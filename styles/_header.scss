@@ -1,0 +1,11 @@
+@import './mixins';
+
+header {
+  width: 100%;
+  padding: 24px 80px;
+  background: $white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  @include flex(row, space-between, center)
+}
+
