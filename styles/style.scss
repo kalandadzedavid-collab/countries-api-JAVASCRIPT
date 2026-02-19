@@ -21,6 +21,10 @@ main {
       border-radius: 5px;
       box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
       overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+      }
       img {
         width: 267px;
         height: 160px;

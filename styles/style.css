@@ -54,10 +54,23 @@ header {
   padding: 24px 80px;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+header img:hover {
+  cursor: pointer !important;
+}
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 1236px) {
+  header {
+    padding: 24px 40px !important;
+  }
+  header h1 {
+    font-size: 20px !important;
+  }
 }
 
 main {
@@ -81,6 +94,9 @@ main .countries .country {
   border-radius: 5px;
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
   overflow: hidden;
+}
+main .countries .country:hover {
+  cursor: pointer;
 }
 main .countries .country img {
   width: 267px;

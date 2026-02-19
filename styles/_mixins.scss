@@ -1,6 +1,12 @@
-@mixin flex($direction: row, $justify: start, $align: start){
-    display: flex;
+@mixin flex($direction: row, $justify: start, $align: start) {
+  display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
+}
+
+@mixin responsiveDetail() {
+  @media (max-width: 1236px){
+    @content
+  };
 }

@@ -1,3 +1,5 @@
+const countryUrl = `https://restcountries.com/v3.1/alpha/BEL?fields=name,flags,population,region,subregion,capital,tld,currencies,languages,borders`;
+
 async function getCountries() {
   try {
     const response = await fetch(
@@ -18,10 +20,12 @@ async function getCountries() {
 async function displayCountries() {
   const countries = await getCountries();
 
+  console.log(countries);
+
   let finalString = ``;
   countries.forEach((country) => {
     const template = `
-    <div class="country">
+    <div class="country" id="${country.cca3}">
                 <img src="${country.flags.svg}" alt="">
                 <div class="card-info">
                     <h2>${country.name.common}</h2>
@@ -39,3 +43,11 @@ async function displayCountries() {
 }
 
 displayCountries();
+
+document.querySelector(".countries").addEventListener("click", (e) => {
+  let country = e.target.closest(".country");
+  let countryId = country.id;
+  console.log(countryId);
+
+  window.location.href = `details.html?id=${countryId}`;
+});

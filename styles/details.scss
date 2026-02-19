@@ -1,0 +1,112 @@
+@import "./variables";
+@import "./mixins";
+@import "./_reset.scss";
+@import "./header";
+
+main {
+  padding: 80px;
+
+  @include responsiveDetail() {
+    padding: 40px;
+  }
+
+  .backbtn {
+    width: 136px;
+    height: 40px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.29);
+    border: 0;
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 125% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 80px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+
+    @include responsiveDetail() {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    img {
+      width: 559.715px;
+
+      @include responsiveDetail() {
+        width: 319px;
+      }
+    }
+
+    .details {
+      @include responsiveDetail() {
+        text-align: center;
+      }
+      h2 {
+        font-size: 32px;
+      }
+
+      .infodiv {
+        display: flex;
+        gap: 141px;
+        margin: 23px 0 70px 0;
+
+        @include responsiveDetail() {
+          flex-direction: column;
+          gap: 50px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .border {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 16px;
+        align-items: center;
+
+        @include responsiveDetail() {
+          flex-direction: column;
+        }
+        button {
+          width: 96px;
+          height: 28px;
+          color: #111517;
+          font-family: "Nunito Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          border-radius: 2px;
+          border: 0 solid #979797;
+          background: #fff;
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
