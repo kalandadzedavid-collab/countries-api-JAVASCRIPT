@@ -17,8 +17,11 @@ async function getCountries() {
   }
 }
 
+let countries = [];
+let filteredCountries = [];
+
 async function displayCountries() {
-  const countries = await getCountries();
+  countries = await getCountries();
 
   console.log(countries);
 
@@ -42,6 +45,8 @@ async function displayCountries() {
   document.querySelector(".countries").innerHTML = finalString;
 }
 
+console.log(countries);
+
 displayCountries();
 
 document.querySelector(".countries").addEventListener("click", (e) => {
@@ -50,4 +55,15 @@ document.querySelector(".countries").addEventListener("click", (e) => {
   console.log(countryId);
 
   window.location.href = `details.html?id=${countryId}`;
+});
+
+document.querySelector(".searchbar").addEventListener("input", (e) => {
+  e.preventDefault();
+
+  let input = document.querySelector(".searchtext").value;
+
+  filteredCountries = countries.filter((c) => {
+    return c.name.common.includes(input);
+  });
+  console.log(filteredCountries);
 });
