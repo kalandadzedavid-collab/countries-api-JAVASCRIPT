@@ -24,6 +24,11 @@ async function displayCoutry() {
   document.querySelector(".flag").setAttribute("src", `${country.flags?.svg}`);
   document.querySelector("h2").textContent = country.name.common;
   document.querySelector(".infodiv").innerHTML = displayText(country);
+
+  let borders = country.borders.map((c) => `<button>${c}</button>`).join("");
+  document.querySelector(
+    ".border"
+  ).innerHTML = `<p>Border Countries:</p> ${borders}`;
 }
 
 displayCoutry();
