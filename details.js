@@ -56,3 +56,32 @@ function displayText(info) {
             </div>
             `;
 }
+
+document.querySelectorAll(".dark-light-mode").forEach((i) => {
+  i.addEventListener("click", () => {
+    document.querySelectorAll(".dark-light-mode").forEach((i) => {
+      i.classList.toggle("hidden");
+    });
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("isDark", true);
+    } else {
+      localStorage.setItem("isDark", false);
+    }
+  });
+});
+
+let isDarkTheme = localStorage.getItem("isDark");
+console.log(isDarkTheme)
+
+if (isDarkTheme === "true") {
+  document.body.classList.add("dark");
+  document.querySelector("#darkimg").classList.remove("hidden");
+  document.querySelector("#whiteimg").classList.add("hidden");
+} else {
+  document.body.classList.remove("dark");
+  document.querySelector("#darkimg").classList.add("hidden");
+  document.querySelector("#whiteimg").classList.remove("hidden");
+}
+

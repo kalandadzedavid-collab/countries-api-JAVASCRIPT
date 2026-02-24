@@ -49,6 +49,65 @@ input {
   color: #fff;
 }
 
+.dark {
+  background-color: #202c36;
+}
+.dark header {
+  background-color: #2B3844;
+}
+.dark header h1 {
+  color: #fff;
+}
+.dark main .filtering .searchtext {
+  background-color: #2B3844;
+  color: #fff;
+}
+.dark main .filtering .searchtext::-moz-placeholder {
+  color: #fff;
+}
+.dark main .filtering .searchtext::placeholder {
+  color: #fff;
+}
+.dark main .countries {
+  background-color: #202c36;
+}
+.dark main .countries .country {
+  background-color: #2B3844;
+}
+.dark main .countries .country .card-info h2 {
+  color: #fff;
+}
+.dark main .countries .country .card-info p {
+  color: #fff;
+}
+.dark main .countries .country .card-info span {
+  color: #fff;
+}
+.dark .backbtn {
+  background-color: #2B3844;
+  color: #fff;
+}
+.dark .backbtn svg path {
+  fill: #fff;
+}
+.dark .details h2 {
+  color: #fff;
+}
+.dark .details p {
+  color: #fff;
+}
+.dark .details span {
+  color: #fff;
+}
+.dark .details .border button {
+  background-color: #2B3844;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
 header {
   width: 100%;
   padding: 24px 80px;

@@ -6,6 +6,10 @@
 main {
   padding: 48px 80px;
 
+  @media (max-width: 768px){
+    padding: 48px 40px;
+  }
+
   .countries {
     width: 100%;
     background-color: $light-bg;
@@ -40,5 +44,38 @@ main {
         }
       }
     }
+  }
+
+.filtering {
+  margin-bottom: 48px;
+}
+
+  .searchbar {
+    @media (max-width: 1023px){
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .searchtext {
+    width: 480px;
+height: 56px;
+border-radius: 5px;
+background: #FFF;
+box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+border: 0;
+padding-left: 50px;
+color: #848484;
+font-family: "Nunito Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+outline: none;
+
+@media (max-width: 1023px){
+  width: 300px;
+
+}
   }
 }

@@ -55,3 +55,83 @@ input {
 .lightfont {
   color: $white;
 }
+
+.dark {
+  background-color: $dark-bg;
+
+  header {
+    background-color: $dark-card;
+
+    h1 {
+      color: $white;
+    }
+  }
+
+  main {
+    .filtering {
+      .searchtext {
+        background-color: $dark-card;
+        color: $white;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+    }
+
+    .countries {
+      background-color: $dark-bg;
+
+      .country {
+        background-color: $dark-card;
+        
+        .card-info {
+          h2 {
+            color: $white;
+          }
+
+          p {
+            color: $white;
+          }
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .backbtn {
+    background-color: $dark-card;
+    color: $white;
+
+    svg path {
+      fill: $white;
+    }
+  }
+
+  .details {
+     h2 {
+            color: $white;
+          }
+
+          p {
+            color: $white;
+          }
+          span {
+            color: $white;
+          }
+
+          .border {
+button {
+            background-color: $dark-card;
+            color: $white;
+          }
+          }
+          
+  }
+}
+
+.hidden {
+  display: none;
+}

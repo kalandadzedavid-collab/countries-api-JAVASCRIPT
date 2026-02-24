@@ -23,10 +23,36 @@ let filteredCountries = [];
 async function displayCountries() {
   countries = await getCountries();
 
-  console.log(countries);
+  countriesToDisplay(countries);
+}
 
+displayCountries();
+
+document.querySelector(".countries").addEventListener("click", (e) => {
+  let country = e.target.closest(".country");
+  let countryId = country.id;
+
+ 
+
+  window.location.href = `details.html?id=${countryId}`;
+  document.querySelector(".searchtext").value = "";
+});
+
+document.querySelector(".searchbar").addEventListener("input", (e) => {
+  e.preventDefault();
+
+  let input = document.querySelector(".searchtext").value.toLowerCase();
+
+  filteredCountries = countries.filter((c) => {
+    return c.name.common.toLowerCase().includes(input);
+  });
+
+  countriesToDisplay(filteredCountries);
+});
+
+function countriesToDisplay(data) {
   let finalString = ``;
-  countries.forEach((country) => {
+  data.forEach((country) => {
     const template = `
     <div class="country" id="${country.cca3}">
                 <img src="${country.flags.svg}" alt="">
@@ -45,25 +71,31 @@ async function displayCountries() {
   document.querySelector(".countries").innerHTML = finalString;
 }
 
-console.log(countries);
-
-displayCountries();
-
-document.querySelector(".countries").addEventListener("click", (e) => {
-  let country = e.target.closest(".country");
-  let countryId = country.id;
-  console.log(countryId);
-
-  window.location.href = `details.html?id=${countryId}`;
-});
-
-document.querySelector(".searchbar").addEventListener("input", (e) => {
-  e.preventDefault();
-
-  let input = document.querySelector(".searchtext").value;
-
-  filteredCountries = countries.filter((c) => {
-    return c.name.common.includes(input);
+document.querySelectorAll(".dark-light-mode").forEach((i) => {
+  i.addEventListener("click", () => {
+  document.querySelectorAll(".dark-light-mode").forEach((i) => {
+    i.classList.toggle("hidden");
   });
-  console.log(filteredCountries);
+  document.body.classList.toggle("dark");
+
+   if(document.body.classList.contains("dark")){
+localStorage.setItem("isDark", true)
+}else{
+  localStorage.setItem("isDark", false)
+}
+
 });
+})
+
+
+let isDarkTheme = localStorage.getItem("isDark")
+
+if (isDarkTheme === "true"){
+  document.body.classList.add("dark")
+  document.querySelector("#darkimg").classList.remove("hidden")
+  document.querySelector("#whiteimg").classList.add("hidden")
+}else{
+    document.body.classList.remove("dark")
+      document.querySelector("#darkimg").classList.add("hidden")
+  document.querySelector("#whiteimg").classList.remove("hidden")
+}
