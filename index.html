@@ -3,25 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-  let isDarkTheme = localStorage.getItem("isDark");
 
-  const darkImg = document.querySelector("#darkimg");
-  const whiteImg = document.querySelector("#whiteimg");
-
-  if (isDarkTheme === "true") {
-    document.body.classList.add("dark");
-    darkImg?.classList.remove("hidden");
-    whiteImg?.classList.add("hidden");
-  } else {
-    document.body.classList.remove("dark");
-    darkImg?.classList.add("hidden");
-    whiteImg?.classList.remove("hidden");
-  }
-});
-    </script>
-   
     <link rel="stylesheet" href="styles/style.css" />
     <script src="./script.js" defer></script>
     <title>Document</title>
@@ -36,6 +18,17 @@
       <section class="filtering">
         <form class="searchbar">
           <input class="searchtext" type="text" placeholder="Search for a country…" />
+        </form>
+        <form class="filteredbyregion">
+
+        <select id="searchcontinent">
+          <option value="all">All regions</option>
+          <option value="africa">Africa</option>
+          <option value="americas">America</option>
+           <option value="asia">Asia</option>
+           <option value="europe">Europe</option>
+           <option value="oceania">Oceania</option>
+        </select>
         </form>
       </section>
       <section class="countries"></section>

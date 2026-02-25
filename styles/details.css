@@ -68,6 +68,11 @@ input {
 .dark main .filtering .searchtext::placeholder {
   color: #fff;
 }
+.dark main .filtering #searchcontinent {
+  background-color: #2B3844;
+  color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+}
 .dark main .countries {
   background-color: #202c36;
 }

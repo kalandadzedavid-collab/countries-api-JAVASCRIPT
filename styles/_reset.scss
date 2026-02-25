@@ -77,6 +77,13 @@ input {
           color: $white;
         }
       }
+
+      #searchcontinent {
+        background-color: $dark-card;
+        color: $white;
+
+        background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+      }
     }
 
     .countries {
@@ -84,7 +91,7 @@ input {
 
       .country {
         background-color: $dark-card;
-        
+
         .card-info {
           h2 {
             color: $white;
@@ -111,24 +118,23 @@ input {
   }
 
   .details {
-     h2 {
-            color: $white;
-          }
+    h2 {
+      color: $white;
+    }
 
-          p {
-            color: $white;
-          }
-          span {
-            color: $white;
-          }
+    p {
+      color: $white;
+    }
+    span {
+      color: $white;
+    }
 
-          .border {
-button {
-            background-color: $dark-card;
-            color: $white;
-          }
-          }
-          
+    .border {
+      button {
+        background-color: $dark-card;
+        color: $white;
+      }
+    }
   }
 }
 

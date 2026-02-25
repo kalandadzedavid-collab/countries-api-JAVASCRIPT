@@ -57,6 +57,8 @@ function displayText(info) {
             `;
 }
 
+applyTheme();
+
 document.querySelectorAll(".dark-light-mode").forEach((i) => {
   i.addEventListener("click", () => {
     document.querySelectorAll(".dark-light-mode").forEach((i) => {
@@ -71,3 +73,18 @@ document.querySelectorAll(".dark-light-mode").forEach((i) => {
     }
   });
 });
+
+function applyTheme() {
+  const darkImg = document.querySelector("#darkimg");
+  const whiteImg = document.querySelector("#whiteimg");
+
+  if (localStorage.getItem("isDark") === "true") {
+    document.body.classList.add("dark");
+    darkImg?.classList.remove("hidden");
+    whiteImg?.classList.add("hidden");
+  } else {
+    document.body.classList.remove("dark");
+    darkImg?.classList.add("hidden");
+    whiteImg?.classList.remove("hidden");
+  }
+}

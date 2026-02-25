@@ -68,6 +68,11 @@ input {
 .dark main .filtering .searchtext::placeholder {
   color: #fff;
 }
+.dark main .filtering #searchcontinent {
+  background-color: #2B3844;
+  color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+}
 .dark main .countries {
   background-color: #202c36;
 }
@@ -179,6 +184,42 @@ main .countries .country .card-info h2 {
 }
 main .filtering {
   margin-bottom: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  main .filtering {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+main .filtering #searchcontinent {
+  padding: 18px 24px;
+  padding-right: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+  width: 200px;
+  height: 56px;
+  color: #111517;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23111517' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+  background-size: 12px;
+}
+main .filtering #searchcontinent:hover {
+  cursor: pointer;
 }
 @media (max-width: 1023px) {
   main .searchbar {
@@ -190,7 +231,7 @@ main .searchtext {
   width: 480px;
   height: 56px;
   border-radius: 5px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
   border: 0;
   padding-left: 50px;
