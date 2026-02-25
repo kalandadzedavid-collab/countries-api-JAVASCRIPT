@@ -88,3 +88,9 @@ function applyTheme() {
     whiteImg?.classList.remove("hidden");
   }
 }
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    applyTheme();
+  }
+});
