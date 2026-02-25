@@ -35,7 +35,6 @@ document.querySelector(".countries").addEventListener("click", (e) => {
  
 
   window.location.href = `details.html?id=${countryId}`;
-  document.querySelector(".searchtext").value = "";
 });
 
 document.querySelector(".searchbar").addEventListener("input", (e) => {
@@ -88,14 +87,19 @@ localStorage.setItem("isDark", true)
 })
 
 
-let isDarkTheme = localStorage.getItem("isDark")
+document.addEventListener("DOMContentLoaded", function () {
+  let isDarkTheme = localStorage.getItem("isDark");
 
-if (isDarkTheme === "true"){
-  document.body.classList.add("dark")
-  document.querySelector("#darkimg").classList.remove("hidden")
-  document.querySelector("#whiteimg").classList.add("hidden")
-}else{
-    document.body.classList.remove("dark")
-      document.querySelector("#darkimg").classList.add("hidden")
-  document.querySelector("#whiteimg").classList.remove("hidden")
-}
+  const darkImg = document.querySelector("#darkimg");
+  const whiteImg = document.querySelector("#whiteimg");
+
+  if (isDarkTheme === "true") {
+    document.body.classList.add("dark");
+    darkImg?.classList.remove("hidden");
+    whiteImg?.classList.add("hidden");
+  } else {
+    document.body.classList.remove("dark");
+    darkImg?.classList.add("hidden");
+    whiteImg?.classList.remove("hidden");
+  }
+});

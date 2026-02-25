@@ -72,16 +72,19 @@ document.querySelectorAll(".dark-light-mode").forEach((i) => {
   });
 });
 
-let isDarkTheme = localStorage.getItem("isDark");
-console.log(isDarkTheme)
+document.addEventListener("DOMContentLoaded", function () {
+  let isDarkTheme = localStorage.getItem("isDark");
 
-if (isDarkTheme === "true") {
-  document.body.classList.add("dark");
-  document.querySelector("#darkimg").classList.remove("hidden");
-  document.querySelector("#whiteimg").classList.add("hidden");
-} else {
-  document.body.classList.remove("dark");
-  document.querySelector("#darkimg").classList.add("hidden");
-  document.querySelector("#whiteimg").classList.remove("hidden");
-}
+  const darkImg = document.querySelector("#darkimg");
+  const whiteImg = document.querySelector("#whiteimg");
 
+  if (isDarkTheme === "true") {
+    document.body.classList.add("dark");
+    darkImg?.classList.remove("hidden");
+    whiteImg?.classList.add("hidden");
+  } else {
+    document.body.classList.remove("dark");
+    darkImg?.classList.add("hidden");
+    whiteImg?.classList.remove("hidden");
+  }
+});
