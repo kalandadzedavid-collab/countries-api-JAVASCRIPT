@@ -87,19 +87,3 @@ localStorage.setItem("isDark", true)
 })
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  let isDarkTheme = localStorage.getItem("isDark");
-
-  const darkImg = document.querySelector("#darkimg");
-  const whiteImg = document.querySelector("#whiteimg");
-
-  if (isDarkTheme === "true") {
-    document.body.classList.add("dark");
-    darkImg?.classList.remove("hidden");
-    whiteImg?.classList.add("hidden");
-  } else {
-    document.body.classList.remove("dark");
-    darkImg?.classList.add("hidden");
-    whiteImg?.classList.remove("hidden");
-  }
-});
